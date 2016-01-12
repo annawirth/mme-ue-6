@@ -28,7 +28,7 @@ require(['jquery', 'backbone', 'models/VideoCollection'],
         var AppRouter = Backbone.Router.extend({
             routes: {
                 '': 'main',
-                '*': 'main'
+                '*unknownRoute': 'main'
             },
             main: function(){
                 var videoCollection = new VideoCollection();
