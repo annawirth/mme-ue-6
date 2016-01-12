@@ -7,6 +7,25 @@
   	<link rel="stylesheet" type="text/css" href="css/app.css">
     <script data-main="js/appclient" src="js/require.js" type="text/javascript"></script>
 
+    <script type="text/template" id="video-template">
+      <h3>title</h3>
+
+      <video class="video" controls>
+        <source src="<%= src %>" type=video/webm>
+      </video>
+
+      <ul>
+        <li>length</li>
+        <li>playcount</li>
+        <li>description</li>
+        <li>ranking</li>
+      </ul>
+
+      <div id="buttons">
+        <button class="play-video">▶</button>
+        <button class="stop-video">▇</button>
+      </div>
+    </script>
   </head>
   <body>
     <div class="wrap">
@@ -16,47 +35,12 @@
       </header>
       <div class="main">
         <div class="content">
-          <section id="video1">
-            <h3>WebM</h3>
 
-            <video id="vid1" controls> 
-              <source src=vid/small_WebM.webm type=video/webm> 
-            </video>
-
-            <div id="buttons">
-              <button id="playVid1">▶</button>
-              <button id="stopVid1">▇</button>
-            </div>  
-          </section>
-
-          <section id="video2">
-            <h3>Ogg Vorbis</h3>
-            <video id="vid2" controls> 
-              <source src=vid/small_Ogg.ogv type=video/ogg> 
-            </video>
-            <div id="buttons">
-              <button id="playVid2">▶</button>
-              <button id="stopVid2">▇</button>
-            </div>
-          </section> 
-
-          <section id="video3">
-            <h3>Mp4</h3>
-            <video id="vid3" controls> 
-              <source src=vid/small_mp4.mp4 type=video/mp4>
-            </video>
-            <div id="buttons">
-                <button id="playVid3">▶</button>
-              <button id="stopVid3">▇</button>
-            </div>
-          </section>
         </div>
 
         <div class="side">
           <ul>
-            <li><a href="#video1">Video 1</a></li>
-            <li><a href="#video2">Video 2</a></li>
-            <li><a href="#video3">Video 3</a></li>
+
           </ul>
         </div>
       </div>
